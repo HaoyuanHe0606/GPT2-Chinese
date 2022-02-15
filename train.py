@@ -69,7 +69,7 @@ def main():
     parser.add_argument('--vocab_bpe', default="tokenizations/vocab.bpe", type=str, help="vocab.bpe")
 
     args = parser.parse_args()
-    torch.cuda.empty_cache()
+    
 
     print('args:\n' + args.__repr__())
 
@@ -125,6 +125,10 @@ def main():
     else:
         model = transformers.modeling_gpt2.GPT2LMHeadModel.from_pretrained(args.pretrained_model)
     model.train()
+    torch.cuda.empty_cache()
+    import gc
+    del variables
+    gc.collect()
     model.to(device)
 
     num_parameters = 0
