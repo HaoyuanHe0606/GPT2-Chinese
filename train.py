@@ -69,6 +69,8 @@ def main():
     parser.add_argument('--vocab_bpe', default="tokenizations/vocab.bpe", type=str, help="vocab.bpe")
 
     args = parser.parse_args()
+    torch.cuda.empty_cache()
+
     print('args:\n' + args.__repr__())
 
     if args.segment:
