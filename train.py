@@ -127,7 +127,6 @@ def main():
     model.train()
     torch.cuda.empty_cache()
     import gc
-    del variables
     gc.collect()
     model.to(device)
 
