@@ -3,7 +3,7 @@ python train.py \
   --tokenized_data_path data/tokenized/ \
   --tokenizer_path cache/vocab_small.txt \
   --raw_data_path data/train.json \
-  --epochs 50 \
+  --epochs 40 \
   --log_step 250 \
   --stride 512 \
   --output_dir model/ \
