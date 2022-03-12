@@ -128,7 +128,7 @@ def main():
     torch.cuda.empty_cache()
     import gc
     gc.collect()
-    model.to(device)
+    model.to('cuda')
 
     num_parameters = 0
     parameters = model.parameters()
