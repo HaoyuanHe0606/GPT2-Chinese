@@ -7,6 +7,6 @@ python train.py \
   --log_step 250 \
   --stride 512 \
   --output_dir model/ \
-  --device 0,1,2,3 \
+  --device 0,1 \
   --num_pieces 100 \
   --raw
